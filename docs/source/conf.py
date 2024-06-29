@@ -70,12 +70,12 @@ html_theme_options = {
 }
 
 intersphinx_mapping = {
-    "qosst-core": ("https://qosst-core.readthedocs.io/", None),
-    "qosst-alice": ("https://qosst-alice.readthedocs.io/", None),
-    "qosst-bob": ("https://qosst-bob.readthedocs.io/", None),
-    "qosst-skr": ("https://qosst-skr.readthedocs.io/", None),
-    "qosst-sim": ("https://qosst-sim.readthedocs.io/", None),
-    "qosst": ("https://qosst.readthedocs.io/", None),
+    "qosst-core": ("https://qosst-core.readthedocs.io/en/latest", None),
+    "qosst-alice": ("https://qosst-alice.readthedocs.io/en/latest", None),
+    "qosst-bob": ("https://qosst-bob.readthedocs.io/en/latest", None),
+    "qosst-skr": ("https://qosst-skr.readthedocs.io/en/latest", None),
+    "qosst-sim": ("https://qosst-sim.readthedocs.io/en/latest", None),
+    "qosst": ("https://qosst.readthedocs.io/en/latest", None),
 }
 root_doc = "index"
 latex_documents = [

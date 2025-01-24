@@ -24,7 +24,10 @@ classifiers = [
 
 [tool.poetry.dependencies]
 python = ">=3.9,<3.14"
-numpy = "^1.22.3"
+numpy = [
+  {version="^1.26.0", python=">=3.9, <3.11"},
+  {version="^2.2.0", python=">=3.11, <3.14"},
+]
 
 [tool.poetry.group.dev.dependencies]
 Sphinx = "^5.0.0"

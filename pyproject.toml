@@ -3,8 +3,8 @@ name = "qosst-hal"
 version = "0.10.0"
 description = "Hardware Abstraction Layer (HAL) submodule of QOSST"
 authors = [
-    "Yoann Piétri <Yoann.Pietri@lip6.fr>",
-    "Thomas Liege <Thomas.Liege@lip6.fr>",
+  "Yoann Piétri <Yoann.Pietri@lip6.fr>",
+  "Thomas Liege <Thomas.Liege@lip6.fr>",
 ]
 packages = [{ include = "qosst_hal" }, { include = "qosst_hal/py.typed" }]
 license = "GPLv3"
@@ -13,30 +13,39 @@ homepage = "https://github.com/qosst"
 repository = "https://github.com/qosst/qosst-hal"
 documentation = "https://qosst-hal.readthedocs.io/"
 classifiers = [
-    "Development Status :: 4 - Beta",
-    "Intended Audience :: Science/Research",
-    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
-    "Natural Language :: English",
-    "Operating System :: OS Independent",
-    "Topic :: Scientific/Engineering :: Physics",
-    "Topic :: Security :: Cryptography",
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Science/Research",
+  "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+  "Natural Language :: English",
+  "Operating System :: OS Independent",
+  "Topic :: Scientific/Engineering :: Physics",
+  "Topic :: Security :: Cryptography",
 ]
 
 [tool.poetry.dependencies]
 python = ">=3.9,<3.14"
 numpy = [
-  {version="^1.26.0", python=">=3.9, <3.11"},
-  {version="^2.2.0", python=">=3.11, <3.14"},
+  { version = "^1.26.0", python = ">=3.9, <3.11" },
+  { version = "^2.2.0", python = ">=3.11, <3.14" },
 ]
 
 [tool.poetry.group.dev.dependencies]
-Sphinx = "^5.0.0"
-sphinx-rtd-theme = "^1.0.0"
+Sphinx = [
+  { version = "^5.0.0", python = ">=3.9, <3.10" },
+  { version = "^8.1.0", python = ">=3.10, <3.14" },
+]
+sphinx-rtd-theme = [
+  { version = "^1.0.0", python = ">=3.9, <3.10" },
+  { version = "^3.0.0", python = ">=3.10, <3.14" },
+]
 sphinx-prompt = "^1.5.0"
-myst-parser = "^1.0.0"
+myst-parser = [
+  { version = "^1.0.0", python = ">=3.9, <3.10" },
+  { version = "^4.0.0", python = ">=3.10, <3.14" },
+]
 setuptools = "^67.6.1"
 docstr-coverage = "^2.2.0"
-pylint = "^2.17.4"
+pylint = "^3.3.0"
 
 [build-system]
 requires = ["poetry-core>=1.0.0", "setuptools", "wheel"]

@@ -1,17 +1,13 @@
-[tool.poetry]
+[project]
 name = "qosst-hal"
-version = "0.10.0"
 description = "Hardware Abstraction Layer (HAL) submodule of QOSST"
 authors = [
-  "Yoann Piétri <Yoann.Pietri@lip6.fr>",
-  "Thomas Liege <Thomas.Liege@lip6.fr>",
+  { name = "Yoann Piétri", email = "Yoann.Pietri@lip6.fr" },
+  { name = "Thomas Liege", email = "Thomas.Liege@lip6.fr" },
 ]
-packages = [{ include = "qosst_hal" }, { include = "qosst_hal/py.typed" }]
+
 license = "GPLv3"
 readme = "README.md"
-homepage = "https://github.com/qosst"
-repository = "https://github.com/qosst/qosst-hal"
-documentation = "https://qosst-hal.readthedocs.io/"
 classifiers = [
   "Development Status :: 4 - Beta",
   "Intended Audience :: Science/Research",
@@ -21,13 +17,23 @@ classifiers = [
   "Topic :: Scientific/Engineering :: Physics",
   "Topic :: Security :: Cryptography",
 ]
-
-[tool.poetry.dependencies]
-python = ">=3.9,<3.14"
-numpy = [
-  { version = "^1.26.0", python = ">=3.9, <3.11" },
-  { version = "^2.2.0", python = ">=3.11, <3.14" },
+requires-python = ">=3.9,<3.14"
+dependencies = [
+  "numpy >=1.26.0, <2.0 ; python_version >= '3.9' and python_version < '3.11'",
+  "numpy >=2.2.0, <3.0 ; python_version >= '3.11' and python_version < '3.14'",
 ]
+dynamic = ["version"]
+
+[project.urls]
+homepage = "https://github.com/qosst"
+repository = "https://github.com/qosst/qosst-hal"
+documentation = "https://qosst-hal.readthedocs.io/"
+
+
+[tool.poetry]
+version = "0.10.0.dev0"
+packages = [{ include = "qosst_hal" }, { include = "qosst_hal/py.typed" }]
+
 
 [tool.poetry.group.dev.dependencies]
 Sphinx = [

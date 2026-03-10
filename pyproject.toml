@@ -16,9 +16,9 @@ classifiers = [
   "Topic :: Scientific/Engineering :: Physics",
   "Topic :: Security :: Cryptography",
 ]
-requires-python = ">=3.9,<3.15"
+requires-python = ">=3.10,<3.15"
 dependencies = [
-  "numpy >=1.26.0, <2.0 ; python_version >= '3.9' and python_version < '3.11'",
+  "numpy >=1.26.0, <2.0 ; python_version >= '3.10' and python_version < '3.11'",
   "numpy >=2.2.0, <3.0 ; python_version >= '3.11' and python_version < '3.15'",
 ]
 dynamic = ["version"]
@@ -30,7 +30,7 @@ documentation = "https://qosst-hal.readthedocs.io/"
 
 
 [tool.poetry]
-version = "0.10.0.dev1"
+version = "0.10.0.dev2"
 packages = [{ include = "qosst_hal" }, { include = "qosst_hal/py.typed" }]
 
 

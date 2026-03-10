@@ -6,21 +6,20 @@ authors = [
   { name = "Thomas Liege", email = "Thomas.Liege@lip6.fr" },
 ]
 
-license = "GPLv3"
+license = "GPL-3.0-only"
 readme = "README.md"
 classifiers = [
   "Development Status :: 4 - Beta",
   "Intended Audience :: Science/Research",
-  "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
   "Natural Language :: English",
   "Operating System :: OS Independent",
   "Topic :: Scientific/Engineering :: Physics",
   "Topic :: Security :: Cryptography",
 ]
-requires-python = ">=3.9,<3.14"
+requires-python = ">=3.9,<3.15"
 dependencies = [
   "numpy >=1.26.0, <2.0 ; python_version >= '3.9' and python_version < '3.11'",
-  "numpy >=2.2.0, <3.0 ; python_version >= '3.11' and python_version < '3.14'",
+  "numpy >=2.2.0, <3.0 ; python_version >= '3.11' and python_version < '3.15'",
 ]
 dynamic = ["version"]
 
@@ -31,7 +30,7 @@ documentation = "https://qosst-hal.readthedocs.io/"
 
 
 [tool.poetry]
-version = "0.10.0.dev0"
+version = "0.10.0.dev1"
 packages = [{ include = "qosst_hal" }, { include = "qosst_hal/py.typed" }]
 
 

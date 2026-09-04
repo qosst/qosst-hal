@@ -18,7 +18,7 @@ from qosst_hal import __version__
 # -- Project information -----------------------------------------------------
 
 project = "qosst-hal"
-copyright = "2021-2024, Yoann Piétri"
+copyright = "2021-2026, Yoann Piétri"
 author = "Yoann Piétri"
 
 

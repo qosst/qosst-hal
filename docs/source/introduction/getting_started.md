@@ -9,7 +9,7 @@ The actual operating system requirement will come down to the hardware used for 
 
 ### Python version
 
-QOSST if officially supporting any python version 3.9 or above.
+QOSST is officially supporting any python version 3.11 or above.
 
 ## Installing the software
 

@@ -16,12 +16,11 @@ classifiers = [
   "Topic :: Scientific/Engineering :: Physics",
   "Topic :: Security :: Cryptography",
 ]
-requires-python = ">=3.10,<3.15"
+requires-python = ">=3.11,<3.15"
 dependencies = [
-  "numpy >=1.26.0, <2.0 ; python_version >= '3.10' and python_version < '3.11'",
-  "numpy >=2.2.0, <3.0 ; python_version >= '3.11' and python_version < '3.15'",
+  "numpy >=2.2.0, <3.0",
 ]
-dynamic = ["version"]
+version = "0.10.0.dev3"
 
 [project.urls]
 homepage = "https://github.com/qosst"
@@ -30,28 +29,28 @@ documentation = "https://qosst-hal.readthedocs.io/"
 
 
 [tool.poetry]
-version = "0.10.0.dev2"
 packages = [{ include = "qosst_hal" }, { include = "qosst_hal/py.typed" }]
 
 
-[tool.poetry.group.dev.dependencies]
-Sphinx = [
-  { version = "^5.0.0", python = ">=3.9, <3.10" },
-  { version = "^8.1.0", python = ">=3.10, <3.14" },
+[dependency-groups]
+dev = [
+  "Sphinx>=8.1.0",
+  "sphinx-rtd-theme>=3.0.0",
+  "sphinx-prompt>=1.5.0",
+  "myst-parser>=4.0.0",
+  "setuptools>=67.6.1",
+  "docstr-coverage>=2.2.0",
+  "pylint>=3.3.0",
+  "black>=26.5.1",
+  "mypy>=2.3.1",
 ]
-sphinx-rtd-theme = [
-  { version = "^1.0.0", python = ">=3.9, <3.10" },
-  { version = "^3.0.0", python = ">=3.10, <3.14" },
-]
-sphinx-prompt = "^1.5.0"
-myst-parser = [
-  { version = "^1.0.0", python = ">=3.9, <3.10" },
-  { version = "^4.0.0", python = ">=3.10, <3.14" },
-]
-setuptools = "^67.6.1"
-docstr-coverage = "^2.2.0"
-pylint = "^3.3.0"
 
 [build-system]
-requires = ["poetry-core>=1.0.0", "setuptools", "wheel"]
-build-backend = "poetry.core.masonry.api"
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["qosst_hal/"]
+
+[tool.hatch.build.targets.wheel.force-include]
+"qosst_hal/py.typed" = "qosst_hal/py.typed"
